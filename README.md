@@ -39,11 +39,9 @@ The goal is to create a single interface, that any mongo based model can simply 
   * This should be a simple as wiring, as the functionality is now all in the `mongo.js` interface!
 
 #### What have we accomplished?
-* How does impact testing?
-* Can you see how this might scale?
-* How do these interfaces relate to the file and memory interfaces?
-* Can they exist in the same system?
+start mongo server:
+* `mongod`
 
 
 ### Testing
-* Required for all interface methods
+* `npm run test`
