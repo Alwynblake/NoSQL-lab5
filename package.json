@@ -1,0 +1,31 @@
+{
+  "name": "nosql-lab5",
+  "version": "1.0.0",
+  "description": "Data Modeling with NoSQL Databases",
+  "main": "index.js",
+  "scripts": {
+    "start": "node list/index.js",
+    "lint": "eslint '**/*.js'",
+    "test": "node_modules/.bin/jest --coverage --verbose",
+    "test-watch": "node_modules/.bin/jest --watchAll --verbose --coverage",
+    "jsdoc": "node_modules/.bin/jsdoc -c ./docs/config/jsdoc.config.json",
+    "watch": "node_modules/.bin/jest --watchAll --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alwynblake/NoSQL-lab5.git"
+  },
+  "author": "Alistair Blake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alwynblake/NoSQL-lab5/issues"
+  },
+  "homepage": "https://github.com/Alwynblake/NoSQL-lab5#readme",
+  "dependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.19.0",
+    "jest": "^24.9.0"
+  }
+}
