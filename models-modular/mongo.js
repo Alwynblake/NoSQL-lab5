@@ -17,7 +17,8 @@ class Model {
    * @returns {count:#,results:[{*}]} | {*}
    */
   get(_id) {
-
+    // let queryObject = id ? {id} : {};
+    // return schema.find(queryObject);
   }
 
   /**
@@ -26,7 +27,8 @@ class Model {
    * @returns {*}
    */
   create(record) {
-
+    // let newEntry = new schema(entry);
+    // return newEntry.save();
   }
 
   /**
@@ -36,6 +38,7 @@ class Model {
    * @returns {*}
    */
   update(_id, record) {
+    // return schema.findByIdAndUpdate(id, entry, {new:true});
 
   }
 
@@ -45,7 +48,7 @@ class Model {
    * @returns {*}
    */
   delete(_id) {
-
+    // return schema.findByIdAndDelete(id);
   }
 
 }
