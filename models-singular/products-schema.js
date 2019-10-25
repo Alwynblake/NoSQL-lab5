@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 // What fields and constraints do we want?
-const categories = mongoose.Schema({
+const products = mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -11,8 +11,11 @@ const categories = mongoose.Schema({
   description: {
     type: String,
   },
+  flavor: {
+    type: String,
+  },
 });
 
 // Do we need to run any lifecycle hooks/middleware?
 
-module.exports = mongoose.model('categories ', categories);
+module.exports = mongoose.model('products ', products);

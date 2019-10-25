@@ -1,21 +1,23 @@
-const Categories = require('../../models-singular/categories.js');
-let categories = new Categories();
+const Products = require('../../models-singular/products.js');
+let products = new Products();
 
 const supergoose = require('../supergoose.js');
 
-describe('Categories Model (Singular)', () => {
+describe('Products Model (Singular)', () => {
 
   // How will you handle both the happy path and edge cases in these tests?
 
-  it('can create() a new category', (done) => {
+  it('can create() a new product', (done) => {
     let obj = {
       name: 'Alistair',
       description: 'really cool',
+      flavor: 'lime',
     };
-    return categories.create(obj)
+    return products.create(obj)
       .then(record => {
         expect(record.name).toEqual('Alistair');
         expect(record.description).toEqual('really cool');
+        expect(record.flavor).toEqual('lime');
         done();
       });
   });
@@ -24,30 +26,32 @@ describe('Categories Model (Singular)', () => {
     let obj = {
       description: 'really cool',
     };
-    expect(() => categories.create(obj)).toThrow();
+    expect(() => products.create(obj)).toThrow();
   });
 
-  it('can get() a category', (done) => {
-    return categories.get()
+  it('can get() a product', (done) => {
+    return products.get()
       .then(results => {
         expect(results.length).toBe(1);
         done();
       });
   });
 
-  it('can get() all categories', (done) => {
+  it('can get() all products', (done) => {
     let obj1 = {
       name: 'Alistair1',
       description: 'really cool1',
+      flavor: 'lime1',
     };
     let obj2 = {
       name: 'Alistair2',
       description: 'really cool2',
+      flavor: 'lime2',
     };
-    categories.create(obj1);
-    return categories.create(obj2)
+    products.create(obj1);
+    return products.create(obj2)
       .then(() => {
-        return categories.get()
+        return products.get()
           .then(results => {
             expect(results.length).toBe(3);
             done();
